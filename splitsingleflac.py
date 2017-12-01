@@ -18,6 +18,7 @@ class MyWindow(Gtk.Window):
         self.bigVbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=5)
 
         self.hbox1 = Gtk.Box(spacing=6)
+        self.hbox2 = Gtk.Box(spacing=6)
 
         label = Gtk.Label("Single Flac filename")
         label.set_alignment(xalign=0, yalign=0.5)
@@ -44,9 +45,10 @@ class MyWindow(Gtk.Window):
         self.hbox1.pack_start(self.vbox3, False, False, 5)
 
         self.splitButton = Gtk.Button(label="Split")
+        self.hbox2.pack_start(self.splitButton, True, True, 5)
 
-        self.bigVbox.pack_start(self.hbox1, True, True, 0)
-        self.bigVbox.pack_start(self.splitButton, True, True, 5)
+        self.bigVbox.pack_start(self.hbox1, False, True, 5)
+        self.bigVbox.pack_start(self.hbox2, False, True, 5)
 
         self.splitButton.connect("clicked", self.on_splitButton_clicked)
         self.flacBrowseButton.connect("clicked", self.on_flacButton_clicked)
