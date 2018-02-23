@@ -1,0 +1,9 @@
+[Desktop Entry]
+Keywords=Flac file splitter
+Name=Splitsingleflac
+Comment=Flac file splitter
+Exec=splitsingleflac
+Icon=icon
+Terminal=false
+Type=Application
+Categories=AudioVideo;Audio;

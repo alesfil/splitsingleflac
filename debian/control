@@ -1,0 +1,21 @@
+Source: splitsingleflac
+Section: unknown
+Priority: optional
+Maintainer: Alessandro Filippo <alessandro.filippo@infinito.it>
+Build-Depends: debhelper (>= 9), dh-python, python-setuptools, python3-setuptools, python-all, python3-all
+Standards-Version: 3.9.8
+Homepage: <insert the upstream URL, if relevant>
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+#Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/splitsingleflac.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/splitsingleflac.git/
+#Testsuite: autopkgtest-pkg-python
+
+Package: splitsingleflac
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends},
+ shntool,
+ cuetools
+Description: Split flac with cue file
+ Split a flac with cue files using shntools and cuetag commands.
+
