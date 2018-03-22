@@ -15,7 +15,8 @@ Package: splitsingleflac
 Architecture: all
 Depends: ${python3:Depends}, ${misc:Depends},
  shntool,
- cuetools
+ cuetools,
+ flac
 Description: Split flac with cue file
  Split a flac with cue files using shntools and cuetag commands.
 
