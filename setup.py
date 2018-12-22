@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'splitsingleflac',
-    version = '0.3',
+    version = '0.4',
     author = 'Alessandro Filippo',
     author_email = 'alessandro.filippo@infinito.it',
     license = 'GPLv2+',

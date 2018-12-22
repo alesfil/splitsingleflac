@@ -61,7 +61,7 @@ class MyWindow(Gtk.Window):
         cuefile = str(self.cuefilenameEntry.get_text())
         workdir = os.path.dirname(flacfile)
         if flacfile != "":
-            subprocess.call(['shntool','split','-f',cuefile,'-o','flac','-t','"%n - %t"',flacfile],cwd = workdir)
+            subprocess.call(['shntool','split','-f',cuefile,'-o','flac','-t','%n - %t',flacfile],cwd = workdir)
             subprocess.call(['mv',flacfile,flacfile+'.bkp'])
             shellCuefile = cuefile.replace(" ","\ ")
             subprocess.call('cuetag %s *.flac' % (shellCuefile), shell=True, cwd = workdir)
@@ -86,7 +86,7 @@ class MyWindow(Gtk.Window):
         if response == Gtk.ResponseType.OK:
             flacfile = dialog.get_filename()
             self.flacfilenameEntry.set_text(flacfile)
-            cuefile = flacfile.replace("flac","cue")
+            cuefile = flacfile.replace(".flac",".cue")
             if os.path.isfile(cuefile):
                 self.cuefilenameEntry.set_text(cuefile) 
 

@@ -4,7 +4,7 @@ PYTHON=`which python`
 DESTDIR=/
 BUILDIR=$(CURDIR)/debian/splitsingleflac
 PROJECT=splitsingleflac
-VERSION=0.3
+VERSION=0.4
 PREFIX=/usr
 
 all:
